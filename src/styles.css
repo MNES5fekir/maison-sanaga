@@ -443,3 +443,4 @@ input[aria-invalid='true'] { border-color: var(--sale); }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
+.footer-contact { display: flex; flex-direction: column; gap: 4px; }

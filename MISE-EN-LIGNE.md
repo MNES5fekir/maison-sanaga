@@ -68,4 +68,4 @@ Depuis un téléphone, en données mobiles :
   Les moteurs de recherche verront surtout l'accueil : comptez aussi sur WhatsApp et les réseaux sociaux.
 - **Commandes :** elles arrivent sur WhatsApp et ne sont enregistrées dans aucune base de données.
   Conservez ces messages, car la loi sur le commerce électronique impose de garder les données de transaction.
-- **Paiement en ligne :** il demanderait un compte marchand et un serveur.
+- **Paiement en ligne :** voir [PAIEMENT-MOBILE.md](PAIEMENT-MOBILE.md).

@@ -24,8 +24,8 @@ function siteMeta() {
           meta({ name: 'twitter:card', content: 'summary_large_image' }),
         )
       }
-      // Une boutique de démonstration ne doit pas apparaître dans les moteurs de recherche.
-      if (!ordersEnabled) tags.push(meta({ name: 'robots', content: 'noindex' }))
+      // Tant que la boutique n'a pas son adresse définitive, les moteurs de recherche ne l'indexent pas.
+      if (!ordersEnabled || !store.siteUrl) tags.push(meta({ name: 'robots', content: 'noindex' }))
       return { html: html.replace('%STORE_NAME%', store.name), tags }
     },
   }

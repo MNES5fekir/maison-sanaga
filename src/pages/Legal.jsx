@@ -14,12 +14,28 @@ function Notice() {
         Adresse : {fill(address)}<br />
         RCCM : {fill(rccm)}<br />
         NIU : {fill(niu)}<br />
-        Contact : <a href={`mailto:${store.email}`}>{store.email}</a>
+        Téléphone : <a href={`tel:+${store.whatsapp}`}>{store.phone}</a><br />
+        E-mail : <a href={`mailto:${store.email}`}>{store.email}</a>
       </p>
       <h2>Hébergement</h2>
       <p>Le site est hébergé par Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis.</p>
       <h2>Photos</h2>
       <p>Les photos non produites par le vendeur portent une mention indiquant leur auteur et leur licence.</p>
+    </>
+  )
+}
+
+function Contact() {
+  return (
+    <>
+      <h1 className="page-title">Contact</h1>
+      <p>Une question sur un produit, une commande, une livraison ou un remboursement ? Écrivez-nous.</p>
+      <ul className="legal-list">
+        <li>WhatsApp : <a href={`https://wa.me/${store.whatsapp}`} target="_blank" rel="noreferrer">{store.phone}</a></li>
+        <li>Téléphone : <a href={`tel:+${store.whatsapp}`}>{store.phone}</a></li>
+        <li>E-mail : <a href={`mailto:${store.email}`}>{store.email}</a></li>
+        <li>Adresse : {fill(store.legal.address)}</li>
+      </ul>
     </>
   )
 }
@@ -53,11 +69,16 @@ function Terms() {
         <li>Livraison offerte à Douala et Yaoundé à partir de {formatPrice(store.freeShippingFrom)} d’achat.</li>
       </ul>
       <p>Les délais sont indicatifs et courent à partir de la confirmation de la commande.</p>
-      <h2>Retours et échanges</h2>
+      <h2>Retours, échanges et remboursements</h2>
       <p>
         Vous pouvez demander un retour ou un échange dans les {store.returnDays} jours suivant la réception, pour un article
         non porté, non lavé et dans son état d’origine. Un article défectueux ou non conforme est échangé ou remboursé aux frais
-        du vendeur. Contactez-nous sur WhatsApp ou à <a href={`mailto:${store.email}`}>{store.email}</a>.
+        du vendeur. Contactez-nous au <a href={`https://wa.me/${store.whatsapp}`} target="_blank" rel="noreferrer">{store.phone}</a> sur
+        WhatsApp ou à <a href={`mailto:${store.email}`}>{store.email}</a>.
+      </p>
+      <p>
+        Un remboursement accepté est versé sous {store.refundDays} jours après réception de l’article retourné, sur le compte
+        mobile money utilisé pour le paiement ou, pour un paiement en espèces, sur le compte mobile money que vous indiquez.
       </p>
       <h2>Droit applicable</h2>
       <p>
@@ -100,6 +121,7 @@ function Privacy() {
 }
 
 export const legalPages = {
+  contact: { title: 'Contact', Page: Contact },
   'mentions-legales': { title: 'Mentions légales', Page: Notice },
   'conditions-de-vente': { title: 'Conditions de vente', Page: Terms },
   confidentialite: { title: 'Confidentialité', Page: Privacy },

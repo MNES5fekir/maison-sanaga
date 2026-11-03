@@ -81,7 +81,10 @@ export default function App() {
               <a key={id} href={`#/${id}`}>{title}</a>
             ))}
           </nav>
-          <a href={`mailto:${store.email}`}>{store.email}</a>
+          <div className="footer-contact">
+            <a href={`https://wa.me/${store.whatsapp}`} target="_blank" rel="noreferrer">WhatsApp : {store.phone}</a>
+            <a href={`mailto:${store.email}`}>{store.email}</a>
+          </div>
         </div>
       </footer>
 

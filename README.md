@@ -43,5 +43,4 @@ Le paiement (Orange Money, MTN MoMo ou espèces) se règle à la réception : le
 - **Vérifier les prix et les frais de livraison** auprès de vos fournisseurs et transporteurs :
   ce sont des ordres de grandeur tirés de sources peu détaillées.
 - **Faire relire les pages légales** (`src/pages/Legal.jsx`) par un juriste camerounais.
-- **Paiement en ligne (facultatif)** : l'encaissement sur le site demande un compte marchand
-  et un serveur.
+- **Paiement en ligne** : voir [PAIEMENT-MOBILE.md](PAIEMENT-MOBILE.md).

@@ -24,7 +24,7 @@ const borrowed = Object.keys(credits).length
 if (borrowed) warnings.push(`${borrowed} photos ne sont pas les vôtres (Wikimedia Commons) : remplacez-les par vos articles et retirez leur entrée de photo-credits.json.`)
 const promos = products.filter((product) => product.compareAt).length
 if (promos) warnings.push(`${promos} prix barrés : gardez seulement ceux qui correspondent à un ancien prix réel.`)
-warnings.push(`Vérifiez le stock, les prix et les descriptions des ${products.length} produits, ainsi que le délai de retour (${store.returnDays} jours).`)
+warnings.push(`Vérifiez le stock, les prix et les descriptions des ${products.length} produits, ainsi que les délais de retour (${store.returnDays} jours) et de remboursement (${store.refundDays} jours).`)
 warnings.push('Faites relire les pages légales par un juriste camerounais.')
 
 for (const warning of warnings) console.log(`À vérifier : ${warning}`)

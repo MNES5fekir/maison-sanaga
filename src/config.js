@@ -3,14 +3,15 @@
 export const store = {
   name: 'Maison Sanaga',
   description: 'Créations africaines et style européen : vêtements, chaussures et décoration livrés partout au Cameroun.',
-  email: 'contact@example.com',
+  email: 'maisonsanaga@gmail.com',
+  phone: '+237 693 49 49 01',
   // Adresse publique du site, sans barre finale (ex. https://www.maboutique.cm).
   siteUrl: '',
   locale: 'fr-CM',
   currency: 'XAF',
   // Numéro WhatsApp qui reçoit les commandes, chiffres seuls avec l'indicatif
   // (ex. 2376XXXXXXXX). Tant qu'il est vide, le site s'annonce comme démonstration.
-  whatsapp: '',
+  whatsapp: '237693494901',
   // Identité du vendeur, affichée dans les mentions légales.
   legal: {
     owner: '',
@@ -19,6 +20,7 @@ export const store = {
     niu: '',
   },
   returnDays: 7,
+  refundDays: 7,
   freeShippingFrom: 50000,
   shipping: {
     local: { label: 'Livraison à Douala ou Yaoundé', delay: '24 à 48 h', price: 2000 },
