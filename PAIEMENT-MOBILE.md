@@ -17,7 +17,7 @@ Si le nom de la société n'est pas « Maison Sanaga », indiquez-le dans `legal
 
 ## 2. Préparer le site
 
-- [ ] `legal.owner`, `legal.address`, `legal.rccm` et `legal.niu` remplis : aucune mention « [à compléter] »
+- [ ] `legal.owner`, `legal.address`, `legal.rccm` et `legal.niu` remplis, si l'agrégateur veut les voir sur le site (seuls les champs remplis s'affichent)
 - [ ] Site publié en `https`, si possible sur votre nom de domaine (`siteUrl`)
 - [ ] Vos vrais produits, photos, prix et stock
 - [ ] Délais de retour et de remboursement (`returnDays`, `refundDays`) conformes à ce que vous appliquez

@@ -5,7 +5,7 @@ de publier le dossier `dist/`. Seul le nom de domaine est payant.
 
 ## 1. Remplir les réglages
 
-Dans `src/config.js`, renseignez `whatsapp`, `email`, `siteUrl`, `legal` (vendeur, adresse, RCCM, NIU),
+Dans `src/config.js`, renseignez `whatsapp`, `email`, `siteUrl` et, si vous les avez, `legal` (vendeur, adresse, RCCM, NIU : seuls les champs remplis s'affichent),
 et vérifiez `name`, `returnDays` et les frais de livraison. Puis lancez :
 
 ```bash
@@ -59,7 +59,7 @@ Depuis un téléphone, en données mobiles :
 - le site s'ouvre en `https` et le bandeau de démonstration a disparu ;
 - une commande de test arrive bien sur votre WhatsApp, avec l'adresse et le total ;
 - les frais de livraison sont bons pour Douala et pour une autre ville ;
-- les trois pages légales sont complètes, sans mention « [à compléter] » ;
+- les pages Contact, Mentions légales, Conditions de vente et Confidentialité s'affichent correctement ;
 - un lien partagé sur WhatsApp affiche l'image et le nom de la boutique.
 
 ## Limites actuelles

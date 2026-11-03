@@ -1,8 +1,7 @@
 import { store } from '../config.js'
 import { formatPrice } from '../lib/format.js'
 
-const fill = (value) => value || '[à compléter]'
-
+// Une information légale n'est affichée que si elle est renseignée dans config.js.
 function Notice() {
   const { owner, address, rccm, niu } = store.legal
   return (
@@ -10,10 +9,10 @@ function Notice() {
       <h1 className="page-title">Mentions légales</h1>
       <h2>Vendeur</h2>
       <p>
-        {fill(owner)}<br />
-        Adresse : {fill(address)}<br />
-        RCCM : {fill(rccm)}<br />
-        NIU : {fill(niu)}<br />
+        {owner || store.name}<br />
+        {address && <>Adresse : {address}<br /></>}
+        {rccm && <>RCCM : {rccm}<br /></>}
+        {niu && <>NIU : {niu}<br /></>}
         Téléphone : <a href={`tel:+${store.whatsapp}`}>{store.phone}</a><br />
         E-mail : <a href={`mailto:${store.email}`}>{store.email}</a>
       </p>
@@ -34,7 +33,7 @@ function Contact() {
         <li>WhatsApp : <a href={`https://wa.me/${store.whatsapp}`} target="_blank" rel="noreferrer">{store.phone}</a></li>
         <li>Téléphone : <a href={`tel:+${store.whatsapp}`}>{store.phone}</a></li>
         <li>E-mail : <a href={`mailto:${store.email}`}>{store.email}</a></li>
-        <li>Adresse : {fill(store.legal.address)}</li>
+        {store.legal.address && <li>Adresse : {store.legal.address}</li>}
       </ul>
     </>
   )
@@ -94,7 +93,7 @@ function Privacy() {
     <>
       <h1 className="page-title">Politique de confidentialité</h1>
       <p>
-        Responsable du traitement : {fill(store.legal.owner)}. Cette politique tient compte de la loi n° 2024/017
+        Responsable du traitement : {store.legal.owner || store.name}. Cette politique tient compte de la loi n° 2024/017
         relative à la protection des données à caractère personnel.
       </p>
       <h2>Données collectées</h2>

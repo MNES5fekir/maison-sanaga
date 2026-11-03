@@ -15,9 +15,8 @@ if (!/^https:\/\/[^/\s]+$/.test(store.siteUrl)) {
 if (!store.email || store.email.endsWith('@example.com')) {
   errors.push('email : remplacez contact@example.com par votre adresse.')
 }
-for (const [field, label] of [['owner', 'le nom du vendeur ou de la société'], ['address', 'l\'adresse'], ['rccm', 'le numéro RCCM'], ['niu', 'le numéro NIU']]) {
-  if (!store.legal[field]) errors.push(`legal.${field} : renseignez ${label}.`)
-}
+const missing = ['owner', 'address', 'rccm', 'niu'].filter((field) => !store.legal[field])
+if (missing.length) warnings.push(`Informations légales absentes (${missing.join(', ')}) : un agrégateur de paiement peut les exiger.`)
 
 const credits = JSON.parse(await readFile(new URL('../src/catalog/photo-credits.json', import.meta.url), 'utf-8'))
 const borrowed = Object.keys(credits).length
